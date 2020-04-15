@@ -67,3 +67,10 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+
+dist
+dist/*
+dist/index.html
+dist/static/css/main.css
+dist/static/js/app.bundle.js
+dist/static/js/vendor.bundle.js

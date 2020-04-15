@@ -4,9 +4,9 @@ export default {
   type: 'object',
   fields: [
     {
-      title: 'Title',
+      title: 'Variant Title',
       name: 'title',
-      type: 'string'
+      type: 'localeString',
     },
     {
       title: 'Weight in grams',
@@ -46,5 +46,11 @@ export default {
     //   name: 'barcode',
     //   type: 'barcode'
     // }
-  ]
+  ],
+  preview: {
+    select: {
+      title: 'title.en',
+      media: 'images.0'
+    }
+  }
 }
