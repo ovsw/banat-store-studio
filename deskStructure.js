@@ -1,6 +1,6 @@
 import S from '@sanity/desk-tool/structure-builder'
-import {MdSettings, MdPerson, MdFolder, MdBook, MdList} from 'react-icons/md'
-import {GiHeartNecklace, GiShop} from 'react-icons/gi'
+import { MdSettings, MdPerson, MdFolder, MdBook, MdList } from 'react-icons/md'
+import { GiHeartNecklace, GiShop } from 'react-icons/gi'
 
 const hiddenDocTypes = listItem =>
   !['category', 'author', 'post', 'product', 'siteSettings'].includes(listItem.getId())
@@ -157,5 +157,5 @@ export default () =>
       // This returns an array of all the document types
       // defined in schema.js. We filter out those that we have
       // defined the structure above
-      // ...S.documentTypeListItems().filter(hiddenDocTypes)
+      ...S.documentTypeListItems().filter(hiddenDocTypes)
     ])

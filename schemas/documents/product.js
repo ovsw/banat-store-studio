@@ -3,9 +3,10 @@ export default {
   title: 'Product',
   type: 'document',
   fieldsets: [
-    {title: 'SEO Info',
+    {
+      title: 'SEO Info',
       name: 'seo',
-      options: {collapsible: true, collapsed: true}
+      options: { collapsible: true, collapsed: true }
     }
   ],
   fields: [
@@ -26,7 +27,7 @@ export default {
       title: 'Title',
       type: 'localeString',
       validation: Rule =>
-      Rule.error("Every product needs a title.").required()
+        Rule.error('Every product needs a title.').required()
     },
     {
       name: 'slug',
@@ -37,7 +38,7 @@ export default {
         maxLength: 96
       },
       validation: Rule =>
-      Rule.error("Every product needs a page slug.").required()
+        Rule.error('Every product needs a page slug.').required()
     },
     {
       title: 'Main SKU',
@@ -49,14 +50,14 @@ export default {
       name: 'price',
       type: 'number',
       validation: Rule =>
-      Rule.error("Every product needs a base price.").required()
+        Rule.error('Every product needs a base price.').required()
     },
     {
       title: 'Weight (grams)',
       name: 'grams',
       type: 'number',
       validation: Rule =>
-      Rule.error("Every product needs a base weight.").required()
+        Rule.error('Every product needs a base weight.').required()
     },
     // {
     //   title: 'Taxable',
@@ -77,7 +78,7 @@ export default {
         }
       ],
       validation: Rule =>
-      Rule.error("Every product needs at least one image.").required()
+        Rule.error('Every product needs at least one image.').required()
     },
     {
       title: 'Variants',
@@ -108,9 +109,9 @@ export default {
       name: 'vendor',
       title: 'Vendor',
       type: 'reference',
-      to: {type: 'vendor'},
+      to: { type: 'vendor' },
       validation: Rule =>
-      Rule.error("Every product needs a vendor.").required()
+        Rule.error('Every product needs a vendor.').required()
     },
     {
       name: 'categories',
@@ -119,18 +120,18 @@ export default {
       of: [
         {
           type: 'reference',
-          to: {type: 'category'}
+          to: { type: 'category' }
         }
       ],
       validation: Rule =>
-      Rule.error("Every product needs a base category.").required()
+        Rule.error('Every product needs a base category.').required()
     },
     {
       name: 'blurb',
       title: 'Blurb',
       type: 'localeString',
       validation: Rule =>
-      Rule.error("Every product needs a blurb.").required()
+        Rule.error('Every product needs a blurb.').required()
     },
     {
       name: 'body',
